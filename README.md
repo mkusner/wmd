@@ -2,6 +2,9 @@
 
 Source: [http://matthewkusner.com](http://matthewkusner.com)
 
+
+![fig1](fig1.png)
+
 Here is version 1.0 of Python and Matlab code for the Word Mover's Distance from the paper ["From Word Embeddings to Document Distances"](http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf)
 
 ## Prerequisites
