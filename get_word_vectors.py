@@ -1,7 +1,6 @@
 import gensim, pdb, sys, scipy.io as io, numpy as np, pickle, string
 
 
-
 # read datasets line by line
 def read_line_by_line(dataset_name,C,model,vec_size):
     # get stop words (except for twitter!)
@@ -74,7 +73,7 @@ def read_line_by_line(dataset_name,C,model,vec_size):
 
 def main():
     # 0. load word2vec model (trained on Google News)
-    model = gensim.models.Word2Vec.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
+    model = gensim.models.KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
     vec_size = 300
 
    # 1. specify train/test datasets
