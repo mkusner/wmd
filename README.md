@@ -92,11 +92,11 @@ Here's a folder with all the raw data: https://www.dropbox.com/sh/f44z3nt3i5279y
 (it also has some extra datasets we ended up not using)
 
 The main subtleties are:
-- I do not have raw data for recipe unfortunately, just BOW
+- We do not have raw data for the recipe dataset unfortunately, just BOW
 - Reuters is here:
     - train: https://www.cs.umb.edu/~smimarog/textmining/datasets/r8-train-all-terms.txt
     - test: https://www.cs.umb.edu/~smimarog/textmining/datasets/r8-test-all-terms.txt
-- I used stop_words_115.txt to remove stop words in all datasets except twitter (which has so few words per document that removing stop words hurt training accuracy)
+- We used stop_words_115.txt to remove stop words in all datasets except twitter (which has so few words per document that removing stop words hurt training accuracy)
 - For ohsumed we used the first 10 classes
 - For 20 news we additionally removed words that appear less than 5 times across all documents, and limited each document to the 500 most common words (i.e., we removed the 501st, 502st, 503rd... most common words in each document, if they existed)
 - We used the 5 train/test splits for bbcsport, twitter, classic, amazon as defined in TR and TE in the BOW data .mat files described above
