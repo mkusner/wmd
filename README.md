@@ -86,6 +86,23 @@ for **ohsumed, reuters (r8), 20news (20ng2_500)**
 The only difference with the above datasets is that because there are pre-defined train-test splits, there are already variables `BOW_xtr`, `BOW_xte`, `xtr`, `xte`, `ytr`, `yte`.
 
 
+## Raw Datasets
+
+Here's a folder with all the raw data: https://www.dropbox.com/sh/f44z3nt3i5279yt/AACHBs4qiISGPdBjB_aEgDVMa?dl=0
+(it also has some extra datasets we ended up not using)
+
+The main subtleties are:
+- I do not have raw data for recipe unfortunately, just BOW
+- Reuters is here:
+    - train: https://www.cs.umb.edu/~smimarog/textmining/datasets/r8-train-all-terms.txt
+    - test: https://www.cs.umb.edu/~smimarog/textmining/datasets/r8-test-all-terms.txt
+- I used stop_words_115.txt to remove stop words in all datasets except twitter (which has so few words per document that removing stop words hurt training accuracy)
+- For ohsumed we used the first 10 classes
+- For 20 news we additionally removed words that appear less than 5 times across all documents, and limited each document to the 500 most common words (i.e., we removed the 501st, 502st, 503rd... most common words in each document, if they existed)
+- We used the 5 train/test splits for bbcsport, twitter, classic, amazon as defined in TR and TE in the BOW data .mat files described above
+- For ohsumed, reuters, 20news (20ng) the train/test splits are already defined so we didn't use 5 different splits.
+
+
 ## Feedback & Contact
 
 Let me know if you have any questions at mkusner AT wustl DOT edu. Please cite using the following BibTeX entry (instead of Google Scholar): 
